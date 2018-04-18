@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="831.20000000000005" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Detail View-->
         <scene sceneID="tNx-5c-5Uk">
             <objects>
-                <viewController id="ySg-T9-oWL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeDetailController" id="ySg-T9-oWL" customClass="RecipeDetailView" customModule="DemoVIPER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KED-eU-WYy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,18 +71,31 @@
                                     <constraint firstAttribute="height" constant="200" id="HKW-gi-gQr"/>
                                     <constraint firstAttribute="width" constant="240" id="pCe-KR-aTX"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-Ju-OKJ">
+                                <rect key="frame" x="10" y="133.5" width="355" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fvP-Ju-OKJ" firstAttribute="centerX" secondItem="KED-eU-WYy" secondAttribute="centerX" id="0j3-75-N8U"/>
+                            <constraint firstItem="v1c-Gf-K7h" firstAttribute="top" secondItem="fvP-Ju-OKJ" secondAttribute="bottom" constant="100" id="3rd-bQ-hbs"/>
+                            <constraint firstItem="fvP-Ju-OKJ" firstAttribute="leading" secondItem="d2h-Fw-RA2" secondAttribute="leading" constant="10" id="Ok1-Ds-AV1"/>
                             <constraint firstItem="v1c-Gf-K7h" firstAttribute="centerX" secondItem="KED-eU-WYy" secondAttribute="centerX" id="TG8-Uc-c9P"/>
                             <constraint firstItem="v1c-Gf-K7h" firstAttribute="centerY" secondItem="KED-eU-WYy" secondAttribute="centerY" id="hwG-pw-4mF"/>
+                            <constraint firstItem="d2h-Fw-RA2" firstAttribute="trailing" secondItem="fvP-Ju-OKJ" secondAttribute="trailing" constant="10" id="wJC-qj-uGd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2h-Fw-RA2"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="v1c-Gf-K7h" id="Rb7-cU-kmK"/>
+                        <outlet property="titleLabel" destination="fvP-Ju-OKJ" id="kDF-1s-143"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tM8-BK-ymB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

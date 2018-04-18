@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol RecipeListViewProtocol: class {
-    var presenter: RecipeListPresenterProtocol? { get set }
+    var senter: RecipeListPresenterProtocol? { get set }
     
     func showRecipes(with recipes: [RecipeModel])
     func showLoading()

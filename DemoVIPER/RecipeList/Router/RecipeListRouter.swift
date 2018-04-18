@@ -35,6 +35,10 @@ class RecipeListRouter: RecipeListRouterProtocol {
     
     func presentRecipeDetailScreen(from view: RecipeListViewProtocol, for recipe: RecipeModel) {
         // Create the recipe detail module -> detail view controller
+        let detailViewController = RecipeDetailRouter.createRecipeDetailModule(withRecipeId: recipe.id)
         // Push the detail view controller
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }
